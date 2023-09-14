@@ -1,0 +1,94 @@
+/* A ordem importa, as MQ devem ficar ao fim do arquivo CSS*/
+/* a última regra prevalece*/
+
+h1 {
+    color: red;
+}
+
+h5 {
+    color: aqua;
+    font-size: 2em;
+}
+
+/*  Sintaxe */
+@media screen and (max-width: 500px) {
+    /* MAX WIDTH = TELA MENOR QUE ALGUMA RESOLUCAO */
+    h1 {
+        color: blue;
+    }
+}
+
+/* Outros modos */
+/* screen, print, speech, all */
+/* Print - Somente quando for imprimir*/
+@media print and (max-width: 600px) {
+    h1 {
+        color: green;
+    }
+}
+
+/* Todos os modos*/
+@media (max-width: 700px) {
+    h2 {
+        color: purple;
+    }
+}
+
+/* Mobile First */
+/* min-width > max-width */
+@media (min-width: 200px) {
+    h2 {
+        color: teal;
+    }
+}
+
+/* Intervalo - And na media query */
+@media (min-width: 300px) and (max-width: 400px) {
+    h3 {
+        font-size: 3em;
+    }
+}
+
+/* Orientação vertical e horizontal da tela */
+@media (orientation: landscape) {   
+    h3 {
+        color: darkorange;
+    }
+}
+
+/* OR na media query */
+@media (max-width: 200px), (orientation: landscape) {
+    h3 {
+        font-size: 4em;
+    }
+}
+
+/* Breakpoints*/
+
+/* 480px - 768px = Tablet */
+@media (min-width: 480px) {
+    h5 {
+        color: burlywood;
+    }
+}
+
+/* 768px - 1024px = Telas menores, laptops */
+@media (min-width: 768px) {
+    h5 {
+        color: cadetblue;
+    }
+}
+
+/* 1024px - 1200px = Desktop */
+@media (min-width: 1024px) {
+    h5 {
+        color: coral;
+    }
+}
+
+/* 1200 e + = telas maiores, tvs */
+@media (min-width: 1200px) {
+    h5 {
+        color: darkorchid;
+    }
+}
